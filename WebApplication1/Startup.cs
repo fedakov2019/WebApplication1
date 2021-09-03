@@ -41,6 +41,12 @@ namespace WebApplication1
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
             
+             
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                AppDBContent conten = scope.ServiceProvider.GetRequiredService<AppDBContent>();
+                DBObject.Initial(conten);
+            }
             
         }
     }
