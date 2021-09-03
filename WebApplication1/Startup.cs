@@ -10,7 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApplication1.data;
 using WebApplication1.data.inerfaces;
-using WebApplication1.data.Mocks;
+using WebApplication1.data.Repozitor;
+using WebApplication1.data.Repozitory;
 
 namespace WebApplication1
 {
@@ -27,8 +28,8 @@ namespace WebApplication1
         {
             services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
             services.AddMvc();
-            services.AddTransient<IAllCars, MockCars>();
-            services.AddTransient<ICarsCategori, MockCategorj>();
+            services.AddTransient<IAllCars, CarRepozitory>();
+            services.AddTransient<ICarsCategori, CategoryRepozitory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

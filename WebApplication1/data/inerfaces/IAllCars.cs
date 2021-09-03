@@ -8,9 +8,10 @@ namespace WebApplication1.data.inerfaces
 {
    public interface IAllCars
     {
-        IEnumerable<Car> Cars { get; //set; 
+        IEnumerable<Car> Cars { get; 
         }
-        IEnumerable<Car> GetfavCars { get; set; }
+        IEnumerable<Car> GetfavCars { get;  
+        }
         Car getobjectcar(int id);
     }
 }

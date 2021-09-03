@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=test;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "data source=oiib-23;initial catalog=test;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
   }
 }
